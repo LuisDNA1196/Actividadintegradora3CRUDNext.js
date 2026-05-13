@@ -1,26 +1,120 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background: #111827;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home,
+.contenedor {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+.home {
+  text-align: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.home h1 {
+  color: #2563eb;
+}
+
+.btn,
+.formulario button {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.formulario {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.acciones button,
+.acciones a {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  background: #e5e7eb;
+  color: #111827;
+  cursor: pointer;
+}
+
+.acciones .danger {
+  background: #dc2626;
+  color: white;
 }
